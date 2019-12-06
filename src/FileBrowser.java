@@ -26,7 +26,7 @@ public class FileBrowser {
         File[] fList = directory.listFiles();
         if(fList != null)
             for (File file : fList) {
-                if (file.isFile()) {
+                if (file.isFile() && (file.getName().endsWith(".txt") || file.getName().endsWith(".cs"))) {
                     files.add(file);
                 } else if (file.isDirectory()) {
                     listf(file.getAbsolutePath());

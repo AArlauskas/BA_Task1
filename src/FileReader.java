@@ -28,7 +28,7 @@ class FileReader {
         while (matcher.find())
         {
             String comment = matcher.group();
-            if(comment.startsWith("\"") && comment.endsWith("\""))
+            if((comment.startsWith("\"") && comment.endsWith("\"")) || comment.equals("// "))
             {
                continue;
             }

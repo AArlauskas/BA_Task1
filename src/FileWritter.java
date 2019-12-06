@@ -6,17 +6,33 @@ import java.util.List;
 public class FileWritter
 {
     private final String SEPARATOR = "==========";
-    public void writeToFile(String filename, List<String> comments)
+    BufferedWriter bufferedWriter;
+
     {
         try {
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\Comments.txt"));
-            System.out.println();
-            System.out.println(SEPARATOR + filename + SEPARATOR);
-            System.out.println();
+            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\Comments.txt", true));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void writeToFile(String filename, List<String> comments)
+    {
+        if(comments.isEmpty())
+        {
+            return;
+        }
+        try {
+
+            bufferedWriter.newLine();
+            bufferedWriter.write(SEPARATOR + filename + SEPARATOR);
+            bufferedWriter.newLine();
             int counter = 1;
             for(String comment : comments)
             {
-                System.out.println(counter + comment);
+                bufferedWriter.write(counter + comment);
+                counter++;
+                bufferedWriter.newLine();
             }
 
         } catch (IOException e) {

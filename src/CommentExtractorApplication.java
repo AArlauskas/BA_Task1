@@ -8,10 +8,11 @@ public class CommentExtractorApplication {
         FileReader fileReader = new FileReader();
         FileBrowser fileBrowser = new FileBrowser();
         FileWritter fileWritter = new FileWritter();
-        fileWritter.writeToFile("test.txt",fileReader.FindComments("C:\\Users\\Aurimas\\Desktop\\ReadmeBA-master\\ReadmeBA\\startup.cs"));
+        //fileWritter.writeToFile("test.txt",fileReader.FindComments("C:\\Users\\Aurimas\\Desktop\\ReadmeBA-master\\ReadmeBA\\startup.cs"));
         for(File file : fileBrowser.files)
         {
            fileWritter.writeToFile(file.getName(),fileReader.FindComments(file.getAbsolutePath()));
+            //System.out.println(file.getAbsolutePath());
         }
         System.out.println("Finished");
     }
