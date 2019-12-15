@@ -1,0 +1,28 @@
+
+==========HomeController.cs==========
+1//TestTitle,
+
+==========Startup.cs==========
+1/*route*/
+2/// <summary>
+3/// Does nothing
+4/// </summary>
+5//TODO: Do something later. When other functionality is implemented.
+6// This method gets called by the runtime. Use this method to add services to the container.
+7// This lambda determines whether user consent for non-essential cookies is needed for a given request.
+8// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+9// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+10/*routes.MapRoute(
+                    name: ,
+                    template: );*/
+
+==========site.css==========
+1/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+2/* Sticky footer styles
+-------------------------------------------------- */
+3/* Sticky footer styles
+-------------------------------------------------- */
+4/* Margin bottom by footer height */
+5/* Set the fixed height of the footer here */
+6/* Vertically center the text there */

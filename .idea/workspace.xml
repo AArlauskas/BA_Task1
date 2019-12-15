@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3500cb8-3c0a-4212-ba0c-515bef976e40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BA Task 1/CommentExtractorApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BA Task 1/CommentExtractorApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BA Task 1/FileBrowser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BA Task 1/FileBrowser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BA Task 1/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BA Task 1/FileReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BA Task 1/FileWritter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BA Task 1/FileWritter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CommentExtractorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CommentExtractorApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FileBrowser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FileBrowser.java" afterDir="false" />
@@ -44,6 +45,18 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="CommentExtractorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CommentExtractorApplication" />
@@ -57,18 +70,6 @@
         <item itemvalue="Application.CommentExtractorApplication" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />

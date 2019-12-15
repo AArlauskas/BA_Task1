@@ -1,30 +1,34 @@
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class FileWritter
+class FileWritter
 {
-    private final String SEPARATOR = "==========";
-    BufferedWriter bufferedWriter;
-
+    private BufferedWriter bufferedWriter;
+    private File file = new File(System.getProperty("user.dir") + "\\Comments.txt");
     {
+        if(file.exists() && file.isFile())
+        {
+            file.delete();
+        }
         try {
-            bufferedWriter = new BufferedWriter(new FileWriter(System.getProperty("user.dir") + "\\Comments.txt", true));
+            bufferedWriter = new BufferedWriter(new FileWriter(file, true));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void writeToFile(String filename, List<String> comments)
+    void writeToFile(String filename, List<String> comments)
     {
         if(comments.isEmpty())
         {
             return;
         }
         try {
-
             bufferedWriter.newLine();
+            String SEPARATOR = "==========";
             bufferedWriter.write(SEPARATOR + filename + SEPARATOR);
             bufferedWriter.newLine();
             int counter = 1;
@@ -38,5 +42,9 @@ public class FileWritter
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    void closeWriter() throws IOException {
+        bufferedWriter.close();
     }
 }

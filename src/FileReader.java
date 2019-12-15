@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,26 +12,23 @@ class FileReader {
     {
         String line;
         List<String> Comments = new ArrayList<>();
-        String wholeCode = "";
+        StringBuilder wholeCode = new StringBuilder();
         try {
             BufferedReader bufferedReader = new BufferedReader(new java.io.FileReader(new File(filePath)));
             while ((line = bufferedReader.readLine()) != null)
             {
-                wholeCode += line + "\n";
+                wholeCode.append(line).append("\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        Matcher matcher = Pattern.compile("//.*|(\"(?:\\\\[^\"]|\\\\\"|.)*?\")|(?s)/\\*.*?\\*/").matcher(wholeCode);
+       wholeCode = new StringBuilder(wholeCode.toString().replaceAll("\"([^\"]*)\"", ""));
+
+        Matcher matcher = Pattern.compile("//.*|(\"(?:\\\\[^\"]|\\\\\"|.)*?\")|(?s)/\\*.*?\\*/").matcher(wholeCode.toString());
         while (matcher.find())
         {
-            String comment = matcher.group();
-            if((comment.startsWith("\"") && comment.endsWith("\"")) || comment.equals("// "))
-            {
-               continue;
-            }
-            Comments.add(comment);
+            Comments.add(matcher.group());
         }
         return Comments;
     }
